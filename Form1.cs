@@ -21,8 +21,9 @@ namespace ShapeSearch_kf
         {
             //hide current form
             this.Hide();
-            //creates and opens game screen
+            //creates and opens game screen and makes form variable to address throughout code
             frmGame frmGame = new frmGame();
+            //opens game form
             frmGame.Show();
         }
 
