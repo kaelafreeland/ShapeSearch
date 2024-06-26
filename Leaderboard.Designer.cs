@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLeaderboard));
             pbxPanel2 = new PictureBox();
             pbxPanel1 = new PictureBox();
+            lblLeaderBoard = new Label();
+            btnBackToStart = new Button();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             SuspendLayout();
@@ -53,24 +55,53 @@
             pbxPanel1.TabIndex = 1;
             pbxPanel1.TabStop = false;
             // 
+            // lblLeaderBoard
+            // 
+            lblLeaderBoard.AutoSize = true;
+            lblLeaderBoard.Font = new Font("Gill Sans Ultra Bold Condensed", 80F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLeaderBoard.ForeColor = Color.SteelBlue;
+            lblLeaderBoard.Location = new Point(285, 0);
+            lblLeaderBoard.Name = "lblLeaderBoard";
+            lblLeaderBoard.Size = new Size(1114, 217);
+            lblLeaderBoard.TabIndex = 2;
+            lblLeaderBoard.Text = "LEADERBOARD";
+            lblLeaderBoard.Click += lblLeaderBoard_Click;
+            // 
+            // btnBackToStart
+            // 
+            btnBackToStart.BackColor = Color.YellowGreen;
+            btnBackToStart.Font = new Font("Gill Sans Ultra Bold Condensed", 60F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBackToStart.Location = new Point(386, 710);
+            btnBackToStart.Name = "btnBackToStart";
+            btnBackToStart.Size = new Size(913, 162);
+            btnBackToStart.TabIndex = 3;
+            btnBackToStart.Text = "BACK TO START";
+            btnBackToStart.UseVisualStyleBackColor = false;
+            btnBackToStart.Click += btnBackToStart_Click;
+            // 
             // frmLeaderboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel1);
             Controls.Add(pbxPanel2);
+            Controls.Add(lblLeaderBoard);
             Name = "frmLeaderboard";
             Text = "Leaderboard";
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pbxPanel2;
         private PictureBox pbxPanel1;
+        private Label lblLeaderBoard;
+        private Button btnBackToStart;
     }
 }

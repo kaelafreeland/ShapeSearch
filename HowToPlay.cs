@@ -16,5 +16,17 @@ namespace ShapeSearch_kf
         {
             InitializeComponent();
         }
+
+        private void frmHowToPlay_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBackToStart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmStartScreen frmStart = new frmStartScreen();
+            frmStart.Show();
+        }
     }
 }

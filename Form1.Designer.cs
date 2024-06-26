@@ -1,6 +1,6 @@
 ﻿namespace ShapeSearch_kf
 {
-    partial class StartScreen
+    partial class frmStartScreen
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStartScreen));
             lblShapeSearch = new Label();
             btnStart = new Button();
             btnHowToPlay = new Button();
@@ -106,7 +106,7 @@
             pbxPanel1.TabIndex = 5;
             pbxPanel1.TabStop = false;
             // 
-            // StartScreen
+            // frmStartScreen
             // 
             AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -120,7 +120,7 @@
             Controls.Add(lblShapeSearch);
             Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "StartScreen";
+            Name = "frmStartScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StartScreen";
             Load += Form1_Load;

@@ -34,6 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1688, 884);
             Name = "frmGame";
             Text = "Game";

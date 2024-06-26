@@ -1,8 +1,8 @@
 namespace ShapeSearch_kf
 {
-    public partial class StartScreen : Form
+    public partial class frmStartScreen : Form
     {
-        public StartScreen()
+        public frmStartScreen()
         {
             InitializeComponent();
         }

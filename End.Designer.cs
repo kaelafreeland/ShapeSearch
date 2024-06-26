@@ -57,6 +57,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1688, 884);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);

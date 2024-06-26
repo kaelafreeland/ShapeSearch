@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHowToPlay));
             pbxPanel1 = new PictureBox();
             pbxPanel2 = new PictureBox();
+            btnBackToStart = new Button();
+            lblHowToPlay = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             SuspendLayout();
@@ -53,24 +55,53 @@
             pbxPanel2.TabIndex = 2;
             pbxPanel2.TabStop = false;
             // 
+            // btnBackToStart
+            // 
+            btnBackToStart.BackColor = Color.YellowGreen;
+            btnBackToStart.Font = new Font("Gill Sans Ultra Bold Condensed", 60F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBackToStart.Location = new Point(393, 710);
+            btnBackToStart.Name = "btnBackToStart";
+            btnBackToStart.Size = new Size(913, 162);
+            btnBackToStart.TabIndex = 4;
+            btnBackToStart.Text = "BACK TO START";
+            btnBackToStart.UseVisualStyleBackColor = false;
+            btnBackToStart.Click += btnBackToStart_Click;
+            // 
+            // lblHowToPlay
+            // 
+            lblHowToPlay.AutoSize = true;
+            lblHowToPlay.Font = new Font("Gill Sans Ultra Bold Condensed", 80F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHowToPlay.ForeColor = Color.SteelBlue;
+            lblHowToPlay.Location = new Point(304, 0);
+            lblHowToPlay.Name = "lblHowToPlay";
+            lblHowToPlay.Size = new Size(1074, 217);
+            lblHowToPlay.TabIndex = 5;
+            lblHowToPlay.Text = "HOW TO PLAY";
+            // 
             // frmHowToPlay
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(lblHowToPlay);
+            Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);
             Name = "frmHowToPlay";
             Text = "HowToPlay";
+            Load += frmHowToPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pbxPanel1;
         private PictureBox pbxPanel2;
+        private Button btnBackToStart;
+        private Label lblHowToPlay;
     }
 }
