@@ -70,10 +70,10 @@
             // btnBackToStart
             // 
             btnBackToStart.BackColor = Color.YellowGreen;
-            btnBackToStart.Font = new Font("Gill Sans Ultra Bold Condensed", 60F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBackToStart.Location = new Point(386, 710);
+            btnBackToStart.Font = new Font("Gill Sans Ultra Bold Condensed", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBackToStart.Location = new Point(518, 760);
             btnBackToStart.Name = "btnBackToStart";
-            btnBackToStart.Size = new Size(913, 162);
+            btnBackToStart.Size = new Size(672, 112);
             btnBackToStart.TabIndex = 3;
             btnBackToStart.Text = "BACK TO START";
             btnBackToStart.UseVisualStyleBackColor = false;

@@ -16,5 +16,20 @@ namespace ShapeSearch_kf
         {
             InitializeComponent();
         }
+
+        private void frmGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void timerTime_Tick(object sender, EventArgs e)
+        {
+            //convert current timer value to an int
+            int timer = Convert.ToInt32(lblTime.Text);
+            //increment timer value by -1
+            timer = timer - 1;
+            //convert timer value to string and write to label
+            lblTime.Text = Convert.ToString(timer);
+        }
     }
 }

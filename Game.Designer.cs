@@ -28,7 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            lblTime = new Label();
+            timerTime = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTime.Location = new Point(735, -9);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(174, 137);
+            lblTime.TabIndex = 0;
+            lblTime.Text = "30";
+            // 
+            // timerTime
+            // 
+            timerTime.Interval = 1;
             // 
             // frmGame
             // 
@@ -36,11 +53,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(lblTime);
             Name = "frmGame";
             Text = "Game";
+            Load += frmGame_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTime;
+        private System.Windows.Forms.Timer timerTime;
     }
 }
