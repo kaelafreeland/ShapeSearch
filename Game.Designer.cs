@@ -45,7 +45,9 @@
             // 
             // timerTime
             // 
-            timerTime.Interval = 1;
+            timerTime.Enabled = true;
+            timerTime.Interval = 1000;
+            timerTime.Tick += timerTime_Tick;
             // 
             // frmGame
             // 
