@@ -15,6 +15,7 @@ namespace ShapeSearch_kf
         public frmGame()
         {
             InitializeComponent();
+            
         }
 
         private void frmGame_Load(object sender, EventArgs e)
@@ -30,6 +31,14 @@ namespace ShapeSearch_kf
             timer = timer - 1;
             //convert timer value to string and write to label
             lblTime.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                this.Hide();
+                //creates and opens game screen and makes form variable to address throughout code
+                frmEnd frmEnd = new frmEnd();
+                //opens game form
+                frmEnd.Show();
+            }
         }
     }
 }
