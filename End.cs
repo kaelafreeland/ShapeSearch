@@ -16,5 +16,13 @@ namespace ShapeSearch_kf
         {
             InitializeComponent();
         }
+
+        private void btnToLeaderboard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLeaderboard frmLeaderboard = new frmLeaderboard();
+            frmLeaderboard.Show();
+
+        }
     }
 }
