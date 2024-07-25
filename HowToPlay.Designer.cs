@@ -33,10 +33,10 @@
             pbxPanel2 = new PictureBox();
             btnBackToStart = new Button();
             lblHowToPlay = new Label();
-            pictureBox1 = new PictureBox();
+            pbxShapesColours = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbxShapesColours).BeginInit();
             SuspendLayout();
             // 
             // pbxPanel1
@@ -80,13 +80,14 @@
             lblHowToPlay.TabIndex = 5;
             lblHowToPlay.Text = "HOW TO PLAY";
             // 
-            // pictureBox1
+            // pbxShapesColours
             // 
-            pictureBox1.Location = new Point(416, 262);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(900, 492);
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            pbxShapesColours.Image = (Image)resources.GetObject("pbxShapesColours.Image");
+            pbxShapesColours.Location = new Point(400, 218);
+            pbxShapesColours.Name = "pbxShapesColours";
+            pbxShapesColours.Size = new Size(900, 488);
+            pbxShapesColours.TabIndex = 6;
+            pbxShapesColours.TabStop = false;
             // 
             // frmHowToPlay
             // 
@@ -94,7 +95,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbxShapesColours);
             Controls.Add(lblHowToPlay);
             Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel2);
@@ -104,7 +105,7 @@
             Load += frmHowToPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxShapesColours).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,6 +116,6 @@
         private PictureBox pbxPanel2;
         private Button btnBackToStart;
         private Label lblHowToPlay;
-        private PictureBox pictureBox1;
+        private PictureBox pbxShapesColours;
     }
 }

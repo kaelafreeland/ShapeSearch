@@ -15,12 +15,13 @@ namespace ShapeSearch_kf
         public frmGame()
         {
             InitializeComponent();
-
+            List<string> colours = new List<string>();
+            List<string> shapes = new List<string>();
         }
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-
+            colours[] = "red, yellow, green, blue, purple"
         }
 
         public void timerTime_Tick(object sender, EventArgs e)
