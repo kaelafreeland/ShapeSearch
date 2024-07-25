@@ -15,7 +15,7 @@ namespace ShapeSearch_kf
         public frmGame()
         {
             InitializeComponent();
-            
+
         }
 
         private void frmGame_Load(object sender, EventArgs e)
@@ -39,6 +39,21 @@ namespace ShapeSearch_kf
                 //opens game form
                 frmEnd.Show();
             }
+        }
+
+        private void pbxShape4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
