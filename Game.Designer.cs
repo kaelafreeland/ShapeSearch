@@ -42,6 +42,7 @@
             pbxShape8 = new PictureBox();
             pbxShape9 = new PictureBox();
             pbxShape10 = new PictureBox();
+            pnlShapeHolder = new Panel();
             ((System.ComponentModel.ISupportInitialize)pbxShape1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape3).BeginInit();
@@ -163,6 +164,13 @@
             pbxShape10.TabIndex = 11;
             pbxShape10.TabStop = false;
             // 
+            // pnlShapeHolder
+            // 
+            pnlShapeHolder.Location = new Point(-1, 4);
+            pnlShapeHolder.Name = "pnlShapeHolder";
+            pnlShapeHolder.Size = new Size(1691, 880);
+            pnlShapeHolder.TabIndex = 12;
+            // 
             // frmGame
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -181,6 +189,7 @@
             Controls.Add(lblFindShape);
             Controls.Add(pbxShape1);
             Controls.Add(lblTime);
+            Controls.Add(pnlShapeHolder);
             Name = "frmGame";
             Text = "Game";
             Load += frmGame_Load;
@@ -213,5 +222,6 @@
         private PictureBox pbxShape8;
         private PictureBox pbxShape9;
         private PictureBox pbxShape10;
+        private Panel pnlShapeHolder;
     }
 }

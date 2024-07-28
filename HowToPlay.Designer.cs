@@ -83,7 +83,7 @@
             // pbxShapesColours
             // 
             pbxShapesColours.Image = (Image)resources.GetObject("pbxShapesColours.Image");
-            pbxShapesColours.Location = new Point(400, 218);
+            pbxShapesColours.Location = new Point(402, 266);
             pbxShapesColours.Name = "pbxShapesColours";
             pbxShapesColours.Size = new Size(900, 488);
             pbxShapesColours.TabIndex = 6;

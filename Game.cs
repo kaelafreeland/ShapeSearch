@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,13 +16,26 @@ namespace ShapeSearch_kf
         public frmGame()
         {
             InitializeComponent();
-            List<string> colours = new List<string>();
-            List<string> shapes = new List<string>();
+            RandomizeImages();
         }
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            colours[] = "red, yellow, green, blue, purple"
+            
+        }
+
+        private void RandomizeImages()
+        {
+            string filePath = "C:\Users\kaela\OneDrive - Bayfield High School\2024\comp sci\programming\shape search game\ShapeSearch_kf\shapes";//how do i get right path
+            string[] images = Directory.GetFiles(filePath, "*_*.png*");
+            //random image
+            Random random = new Random();
+
+            //for 10 images in 
+            for (int i = 0; i < 10; i++)
+
+
+
         }
 
         public void timerTime_Tick(object sender, EventArgs e)
