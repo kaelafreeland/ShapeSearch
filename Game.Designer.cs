@@ -78,6 +78,7 @@
             pbxShape1.Size = new Size(250, 250);
             pbxShape1.TabIndex = 1;
             pbxShape1.TabStop = false;
+            pbxShape1.Click += pbxShape1_Click;
             // 
             // lblFindShape
             // 
@@ -96,6 +97,7 @@
             pbxShape2.Size = new Size(250, 250);
             pbxShape2.TabIndex = 3;
             pbxShape2.TabStop = false;
+            pbxShape2.Click += pbxShape2_Click;
             // 
             // pbxShape3
             // 
@@ -104,6 +106,7 @@
             pbxShape3.Size = new Size(250, 250);
             pbxShape3.TabIndex = 4;
             pbxShape3.TabStop = false;
+            pbxShape3.Click += pbxShape3_Click;
             // 
             // pbxShape4
             // 
@@ -130,6 +133,7 @@
             pbxShape7.Size = new Size(250, 250);
             pbxShape7.TabIndex = 7;
             pbxShape7.TabStop = false;
+            pbxShape7.Click += pbxShape7_Click;
             // 
             // pbxShape6
             // 
@@ -138,6 +142,7 @@
             pbxShape6.Size = new Size(250, 250);
             pbxShape6.TabIndex = 8;
             pbxShape6.TabStop = false;
+            pbxShape6.Click += pbxShape6_Click;
             // 
             // pbxShape8
             // 
@@ -146,6 +151,7 @@
             pbxShape8.Size = new Size(250, 250);
             pbxShape8.TabIndex = 9;
             pbxShape8.TabStop = false;
+            pbxShape8.Click += pbxShape8_Click;
             // 
             // pbxShape9
             // 
@@ -163,6 +169,7 @@
             pbxShape10.Size = new Size(250, 250);
             pbxShape10.TabIndex = 11;
             pbxShape10.TabStop = false;
+            pbxShape10.Click += pbxShape10_Click;
             // 
             // pnlShapeHolder
             // 

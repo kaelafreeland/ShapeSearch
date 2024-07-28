@@ -4,12 +4,14 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ShapeSearch_kf
 {
     public partial class frmGame : Form
     {
         private PictureBox[] pictureBoxes;
+     
 
         public frmGame()
         {
@@ -17,11 +19,12 @@ namespace ShapeSearch_kf
             int score = 0;
             InitializePbxShapes();
             RandomizeImages();
+            
         }
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void InitializePbxShapes()
@@ -62,9 +65,11 @@ namespace ShapeSearch_kf
                 {
                     //put 1 of 10 images into empty picturebox until all are full
                     pictureBoxes[i].Image = Image.FromFile(chosenImages[i]);
-                    
+
                 }
             }
+
+           SpecificShape(chosenImages);
         }
 
         private void ShuffleImages(string[] images)
@@ -78,13 +83,21 @@ namespace ShapeSearch_kf
             {
                 //gets index from 0 to current index
                 int r = random.Next(0, i + 1);
-                
+
                 //swap images from current to new index (r)
                 string placeholder = images[i];
                 //moves random image to index and current image to random index
                 images[i] = images[r];
                 images[r] = placeholder;
             }
+        }
+
+        private void SpecificShape(List <string> chosenImages)
+        {
+            Random random = new Random();
+
+            List<string> specificShape = chosenImages.Take(1).ToList();
+
         }
 
         public void timerTime_Tick(object sender, EventArgs e)
@@ -105,19 +118,59 @@ namespace ShapeSearch_kf
             }
         }
 
-        private void pbxShape4_Click(object sender, EventArgs e)
+        #region pbxShapes
+
+        private void pbxShape1_Click(object sender, EventArgs e)
         {
            
+                lblFindShape.Text = "clicked";
+            
+        }
+
+        private void pbxShape2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape4_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pbxShape5_Click(object sender, EventArgs e)
         {
-          
+
         }
 
+        private void pbxShape6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxShape10_Click(object sender, EventArgs e)
+        {
+
+        }
         private void pbxShape9_Click(object sender, EventArgs e)
         {
-            
+
         }
+
+        #endregion
     }
 }
