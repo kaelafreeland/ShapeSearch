@@ -16,7 +16,11 @@ namespace ShapeSearch_kf
         public frmGame()
         {
             InitializeComponent();
+            int score = 0;
+
             RandomizeImages();
+
+           
         }
 
         private void frmGame_Load(object sender, EventArgs e)
@@ -26,16 +30,30 @@ namespace ShapeSearch_kf
 
         private void RandomizeImages()
         {
-            string filePath = "C:\Users\kaela\OneDrive - Bayfield High School\2024\comp sci\programming\shape search game\ShapeSearch_kf\shapes";//how do i get right path
+            string filePath =  @"C:\Users\kaela\OneDrive - Bayfield High School\2024\comp sci\programming\shape search game\ShapeSearch_kf\shapes";
+
+            //sorts files named in the format colour_shape into an array called images
             string[] images = Directory.GetFiles(filePath, "*_*.png*");
+
+            //method to shuffle the images array
+            ShuffleImages(images);
+
+            //gets 10 images at random from all images and creates a list
+            List<string> chosenImages = images.Take(10).ToList();
+
+
+            
+            //for the 10 images added to the list
+            for (int i = 0; i < 10; i++)
+            {
+                
+            }
+
+        }
+        private void ShuffleImages (string[] images)
+        {
             //random image
             Random random = new Random();
-
-            //for 10 images in 
-            for (int i = 0; i < 10; i++)
-
-
-
         }
 
         public void timerTime_Tick(object sender, EventArgs e)
