@@ -65,7 +65,7 @@ namespace ShapeSearch_kf
                 {
                     //put 1 of 10 images into empty picturebox until all are full
                     pictureBoxes[i].Image = System.Drawing.Image.FromFile(chosenImages[i]);
-
+                    pictureBoxes[i].Tag = chosenImages[i];
                 }
             }
 
@@ -108,8 +108,23 @@ namespace ShapeSearch_kf
             //writes the name of the chosen shape onto the form
             lblFindShape.Text = "CLICK THE " + colour.ToUpper() + " " + shape.ToUpper();
 
-           
+        }
 
+        
+
+        private void ShapeClicked(string specificShape, PictureBox clickedPictureBox)
+        {
+            if (clickedPictureBox.Tag.ToString() == specificShape)
+            {
+                //box pops up to show that correct shape was clickede
+                MessageBox.Show("yes");
+                RandomizeImages();
+            }
+            else
+            {
+                //tells that incorrect shape was clicked
+                MessageBox.Show("no");
+            }
         }
 
         public void timerTime_Tick(object sender, EventArgs e)
@@ -134,55 +149,55 @@ namespace ShapeSearch_kf
 
         private void pbxShape1_Click(object sender, EventArgs e)
         {
-           
-                lblFindShape.Text = "clicked";
-            
+            ShapeClicked(specificShape, pbxShape1);
         }
 
         private void pbxShape2_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape2);
         }
 
         private void pbxShape3_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape3);
         }
 
         private void pbxShape4_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape4);
         }
 
         private void pbxShape5_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape5);
         }
 
         private void pbxShape6_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape6);
         }
 
         private void pbxShape7_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape7);
         }
 
         private void pbxShape8_Click(object sender, EventArgs e)
         {
+            ShapeClicked(specificShape, pbxShape8);
 
         }
 
         private void pbxShape10_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape9);
         }
         private void pbxShape9_Click(object sender, EventArgs e)
         {
-
+            ShapeClicked(specificShape, pbxShape10);
         }
 
         #endregion
+
     }
 }
