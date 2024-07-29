@@ -4,14 +4,14 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
+using System.Drawing;
 
 namespace ShapeSearch_kf
 {
     public partial class frmGame : Form
     {
         private PictureBox[] pictureBoxes;
-     
+        private string specificShape;
 
         public frmGame()
         {
@@ -64,12 +64,12 @@ namespace ShapeSearch_kf
                 if (pictureBoxes[i] != null)
                 {
                     //put 1 of 10 images into empty picturebox until all are full
-                    pictureBoxes[i].Image = Image.FromFile(chosenImages[i]);
+                    pictureBoxes[i].Image = System.Drawing.Image.FromFile(chosenImages[i]);
 
                 }
             }
 
-           SpecificShape(chosenImages);
+            SpecificShape(chosenImages);
         }
 
         private void ShuffleImages(string[] images)
@@ -96,7 +96,19 @@ namespace ShapeSearch_kf
         {
             Random random = new Random();
 
-            List<string> specificShape = chosenImages.Take(1).ToList();
+            specificShape = chosenImages[random.Next(chosenImages.Count)];
+
+            string file = Path.GetFileNameWithoutExtension(specificShape);
+
+            //creates data array to spplit file name into colour and shape 
+            string[] data = file.Split('_');
+            string colour = data[0];
+            string shape = data[1];
+
+            //writes the name of the chosen shape onto the form
+            lblFindShape.Text = "CLICK THE " + colour.ToUpper() + " " + shape.ToUpper();
+
+           
 
         }
 
