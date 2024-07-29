@@ -140,7 +140,7 @@ namespace ShapeSearch_kf
             {
                 this.Hide();
                 // Creates and opens game screen and makes form variable to address throughout code
-                frmEnd frmEnd = new frmEnd();
+                frmEnd frmEnd = new frmEnd(totalScore);
                 // Opens game form
                 frmEnd.Show();
             }
