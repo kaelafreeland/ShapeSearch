@@ -12,11 +12,13 @@ namespace ShapeSearch_kf
     {
         private PictureBox[] pictureBoxes;
         private string specificShape;
+        public int totalScore;
+        public int score = 0;
 
         public frmGame()
         {
             InitializeComponent();
-            int score = 0;
+            
             InitializePbxShapes();
             RandomizeImages();
             
@@ -116,8 +118,7 @@ namespace ShapeSearch_kf
         {
             if (clickedPictureBox.Tag.ToString() == specificShape)
             {
-                //box pops up to show that correct shape was clickede
-                MessageBox.Show("yes");
+                totalScore = score + 10;
                 RandomizeImages();
             }
             else
@@ -188,11 +189,11 @@ namespace ShapeSearch_kf
 
         }
 
-        private void pbxShape10_Click(object sender, EventArgs e)
+        private void pbxShape9_Click(object sender, EventArgs e)
         {
             ShapeClicked(specificShape, pbxShape9);
         }
-        private void pbxShape9_Click(object sender, EventArgs e)
+        private void pbxShape10_Click(object sender, EventArgs e)
         {
             ShapeClicked(specificShape, pbxShape10);
         }
