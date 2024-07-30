@@ -116,6 +116,7 @@
             Controls.Add(pbxPanel1);
             Name = "frmEnd";
             Text = "End";
+            Load += frmEnd_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
             ResumeLayout(false);

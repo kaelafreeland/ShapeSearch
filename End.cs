@@ -12,12 +12,16 @@ namespace ShapeSearch_kf
 {
     public partial class frmEnd : Form
     {
-        private int totalScore;
+        int totalScore;
 
-        public frmEnd(int score)
+        public frmEnd(int argstotalScore)
         {
             InitializeComponent();
-            totalScore = score;
+            totalScore = argstotalScore;
+        }
+
+        private void frmEnd_Load(object sender, EventArgs e)
+        {
             lblPoints.Text = totalScore.ToString();
         }
 
@@ -28,5 +32,7 @@ namespace ShapeSearch_kf
             frmLeaderboard.Show();
 
         }
+
+      
     }
 }
