@@ -12,7 +12,6 @@ namespace ShapeSearch_kf
     {
         private PictureBox[] pictureBoxes;
         private string specificShape;
-        int totalScore;
         int score = 0;
         int addpoints = 10;
         int removepoints = 3;
@@ -119,13 +118,13 @@ namespace ShapeSearch_kf
         {
             if (clickedPictureBox.Tag.ToString() == specificShape)
             {
-                totalScore = score + addpoints;
+                score = score += addpoints;
                 RandomizeImages();
             }
             else
             {
                 
-                totalScore = score - removepoints;
+                score = score -= removepoints;
             }
         }
 
@@ -141,7 +140,7 @@ namespace ShapeSearch_kf
             {
                 this.Hide();
                 // Creates and opens game screen and makes form variable to address throughout code
-                frmEnd frmEnd = new frmEnd(totalScore);
+                frmEnd frmEnd = new frmEnd(score);
                 // Opens game form
                 frmEnd.Show();
             }
