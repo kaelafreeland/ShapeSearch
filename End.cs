@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ShapeSearch_kf
 {
     public partial class frmEnd : Form
     {
         int totalScore;
+
+        bool textEntered = false;
+        string username;
 
         public frmEnd(int argstotalScore)
         {
@@ -22,7 +26,8 @@ namespace ShapeSearch_kf
 
         private void frmEnd_Load(object sender, EventArgs e)
         {
-            lblPoints.Text = totalScore.ToString();
+            lblPoints.Text = "YOU SCORED " + totalScore.ToString() + " POINTS";
+            tbxEnterName.Text = " ENTER NAME HERE...";
         }
 
         private void btnToLeaderboard_Click(object sender, EventArgs e)
@@ -30,9 +35,21 @@ namespace ShapeSearch_kf
             this.Hide();
             frmLeaderboard frmLeaderboard = new frmLeaderboard();
             frmLeaderboard.Show();
-
         }
 
-      
+        private void tbxEnterName_Enter(object sender, EventArgs e) 
+        {
+            textEntered = true;
+            tbxEnterName.Text = "";
+        }
+        private void tbxEnterName_TextChanged(object sender, EventArgs e)
+        {
+            //if text is entered
+            textEntered = true;
+            username = tbxEnterName.Text;
+        }
+
+
+
     }
 }

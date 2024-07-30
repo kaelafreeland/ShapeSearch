@@ -32,9 +32,9 @@
             pbxPanel1 = new PictureBox();
             pbxPanel2 = new PictureBox();
             btnToLeaderboard = new Button();
-            lblEnterName = new Label();
             lblWellDone = new Label();
             lblPoints = new Label();
+            tbxEnterName = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             SuspendLayout();
@@ -69,17 +69,6 @@
             btnToLeaderboard.UseVisualStyleBackColor = false;
             btnToLeaderboard.Click += btnToLeaderboard_Click;
             // 
-            // lblEnterName
-            // 
-            lblEnterName.AutoSize = true;
-            lblEnterName.BackColor = Color.FromArgb(255, 209, 71);
-            lblEnterName.Font = new Font("Gill Sans Ultra Bold Condensed", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEnterName.Location = new Point(325, 601);
-            lblEnterName.Name = "lblEnterName";
-            lblEnterName.Size = new Size(1029, 110);
-            lblEnterName.TabIndex = 4;
-            lblEnterName.Text = "ENTER NAME HERE...          ";
-            // 
             // lblWellDone
             // 
             lblWellDone.AutoSize = true;
@@ -96,11 +85,23 @@
             lblPoints.AutoSize = true;
             lblPoints.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
             lblPoints.ForeColor = Color.FromArgb(109, 88, 157);
-            lblPoints.Location = new Point(325, 160);
+            lblPoints.Location = new Point(287, 164);
             lblPoints.Name = "lblPoints";
             lblPoints.Size = new Size(1018, 137);
             lblPoints.TabIndex = 6;
             lblPoints.Text = "YOU SCORED # POINTS";
+            // 
+            // tbxEnterName
+            // 
+            tbxEnterName.BackColor = Color.FromArgb(255, 209, 71);
+            tbxEnterName.Font = new Font("Gill Sans Ultra Bold Condensed", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            tbxEnterName.Location = new Point(325, 601);
+            tbxEnterName.MaxLength = 16;
+            tbxEnterName.Name = "tbxEnterName";
+            tbxEnterName.Size = new Size(1029, 107);
+            tbxEnterName.TabIndex = 7;
+            tbxEnterName.TextChanged += tbxEnterName_TextChanged;
+            tbxEnterName.Enter += tbxEnterName_Enter;
             // 
             // frmEnd
             // 
@@ -108,9 +109,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(tbxEnterName);
             Controls.Add(lblPoints);
             Controls.Add(lblWellDone);
-            Controls.Add(lblEnterName);
             Controls.Add(btnToLeaderboard);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);
@@ -128,8 +129,8 @@
         private PictureBox pbxPanel1;
         private PictureBox pbxPanel2;
         private Button btnToLeaderboard;
-        private Label lblEnterName;
         private Label lblWellDone;
         private Label lblPoints;
+        private TextBox tbxEnterName;
     }
 }
