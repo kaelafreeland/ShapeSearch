@@ -37,7 +37,7 @@ namespace ShapeSearch_kf
         private void btnLeaderboard_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmLeaderboard frmLeaderboard = new frmLeaderboard();
+            frmLeaderboard frmLeaderboard = new frmLeaderboard(-1000, "nameEntered");
             frmLeaderboard.Show();
         }
     }

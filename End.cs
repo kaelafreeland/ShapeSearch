@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ShapeSearch_kf
@@ -33,11 +34,11 @@ namespace ShapeSearch_kf
         private void btnToLeaderboard_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmLeaderboard frmLeaderboard = new frmLeaderboard();
+            frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
             frmLeaderboard.Show();
         }
 
-        private void tbxEnterName_Enter(object sender, EventArgs e) 
+        private void tbxEnterName_Enter(object sender, EventArgs e)
         {
             textEntered = true;
             tbxEnterName.Text = "";
@@ -47,9 +48,22 @@ namespace ShapeSearch_kf
             //if text is entered
             textEntered = true;
             username = tbxEnterName.Text;
+            
         }
 
+        private void tbxName_KeyDown(object sender, KeyEventArgs e)
+        {
+            //check if pressed key is enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                //makes the button 'to leaderboard' visible
+                btnToLeaderboard.Visible = true;
+            }
+        }
 
+        private void lblPoints_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

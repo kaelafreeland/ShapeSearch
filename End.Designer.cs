@@ -67,6 +67,7 @@
             btnToLeaderboard.TabIndex = 3;
             btnToLeaderboard.Text = "TO LEADERBOARD";
             btnToLeaderboard.UseVisualStyleBackColor = false;
+            btnToLeaderboard.Visible = false;
             btnToLeaderboard.Click += btnToLeaderboard_Click;
             // 
             // lblWellDone
@@ -85,11 +86,12 @@
             lblPoints.AutoSize = true;
             lblPoints.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
             lblPoints.ForeColor = Color.FromArgb(109, 88, 157);
-            lblPoints.Location = new Point(287, 164);
+            lblPoints.Location = new Point(263, 162);
             lblPoints.Name = "lblPoints";
             lblPoints.Size = new Size(1018, 137);
             lblPoints.TabIndex = 6;
             lblPoints.Text = "YOU SCORED # POINTS";
+            lblPoints.Click += lblPoints_Click;
             // 
             // tbxEnterName
             // 
@@ -102,6 +104,7 @@
             tbxEnterName.TabIndex = 7;
             tbxEnterName.TextChanged += tbxEnterName_TextChanged;
             tbxEnterName.Enter += tbxEnterName_Enter;
+            tbxEnterName.KeyDown += tbxName_KeyDown;
             // 
             // frmEnd
             // 
@@ -109,12 +112,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(pbxPanel2);
+            Controls.Add(pbxPanel1);
             Controls.Add(tbxEnterName);
             Controls.Add(lblPoints);
             Controls.Add(lblWellDone);
             Controls.Add(btnToLeaderboard);
-            Controls.Add(pbxPanel2);
-            Controls.Add(pbxPanel1);
             Name = "frmEnd";
             Text = "End";
             Load += frmEnd_Load;

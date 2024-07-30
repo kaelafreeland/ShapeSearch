@@ -33,6 +33,7 @@
             pbxPanel1 = new PictureBox();
             lblLeaderBoard = new Label();
             btnBackToStart = new Button();
+            rtbLeaderboard = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             SuspendLayout();
@@ -79,18 +80,29 @@
             btnBackToStart.UseVisualStyleBackColor = false;
             btnBackToStart.Click += btnBackToStart_Click;
             // 
+            // rtbLeaderboard
+            // 
+            rtbLeaderboard.Location = new Point(393, 220);
+            rtbLeaderboard.Name = "rtbLeaderboard";
+            rtbLeaderboard.ScrollBars = RichTextBoxScrollBars.None;
+            rtbLeaderboard.Size = new Size(877, 475);
+            rtbLeaderboard.TabIndex = 4;
+            rtbLeaderboard.Text = "";
+            // 
             // frmLeaderboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(rtbLeaderboard);
             Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel1);
             Controls.Add(pbxPanel2);
             Controls.Add(lblLeaderBoard);
             Name = "frmLeaderboard";
             Text = "Leaderboard";
+            Load += frmLeaderboard_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ResumeLayout(false);
@@ -103,5 +115,6 @@
         private PictureBox pbxPanel1;
         private Label lblLeaderBoard;
         private Button btnBackToStart;
+        private RichTextBox rtbLeaderboard;
     }
 }
