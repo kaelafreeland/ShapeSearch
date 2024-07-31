@@ -35,6 +35,7 @@
             lblWellDone = new Label();
             lblPoints = new Label();
             tbxEnterName = new TextBox();
+            tbxEnding = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             SuspendLayout();
@@ -61,7 +62,7 @@
             // 
             btnToLeaderboard.BackColor = Color.FromArgb(255, 209, 71);
             btnToLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 60F, FontStyle.Regular, GraphicsUnit.Point);
-            btnToLeaderboard.Location = new Point(325, 714);
+            btnToLeaderboard.Location = new Point(325, 673);
             btnToLeaderboard.Name = "btnToLeaderboard";
             btnToLeaderboard.Size = new Size(1029, 148);
             btnToLeaderboard.TabIndex = 3;
@@ -97,14 +98,25 @@
             // 
             tbxEnterName.BackColor = Color.FromArgb(255, 209, 71);
             tbxEnterName.Font = new Font("Gill Sans Ultra Bold Condensed", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            tbxEnterName.Location = new Point(325, 601);
+            tbxEnterName.Location = new Point(325, 551);
             tbxEnterName.MaxLength = 16;
             tbxEnterName.Name = "tbxEnterName";
             tbxEnterName.Size = new Size(1029, 107);
             tbxEnterName.TabIndex = 7;
+            tbxEnterName.Text = " ENTER NAME HERE...";
             tbxEnterName.TextChanged += tbxEnterName_TextChanged;
             tbxEnterName.Enter += tbxEnterName_Enter;
             tbxEnterName.KeyDown += tbxName_KeyDown;
+            // 
+            // tbxEnding
+            // 
+            tbxEnding.Font = new Font("Gill Sans Ultra Bold Condensed", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            tbxEnding.Location = new Point(325, 368);
+            tbxEnding.Multiline = true;
+            tbxEnding.Name = "tbxEnding";
+            tbxEnding.Size = new Size(1029, 207);
+            tbxEnding.TabIndex = 8;
+            tbxEnding.Text = "TO MAKE THE LEADERBOARAD ENTER YOUR NAME BELOW (16 char limit):\r\n";
             // 
             // frmEnd
             // 
@@ -118,6 +130,7 @@
             Controls.Add(lblPoints);
             Controls.Add(lblWellDone);
             Controls.Add(btnToLeaderboard);
+            Controls.Add(tbxEnding);
             Name = "frmEnd";
             Text = "End";
             Load += frmEnd_Load;
@@ -135,5 +148,6 @@
         private Label lblWellDone;
         private Label lblPoints;
         private TextBox tbxEnterName;
+        private TextBox tbxEnding;
     }
 }

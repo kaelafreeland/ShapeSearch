@@ -82,6 +82,7 @@
             // 
             // rtbLeaderboard
             // 
+            rtbLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
             rtbLeaderboard.Location = new Point(393, 220);
             rtbLeaderboard.Name = "rtbLeaderboard";
             rtbLeaderboard.ScrollBars = RichTextBoxScrollBars.None;

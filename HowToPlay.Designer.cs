@@ -34,6 +34,7 @@
             btnBackToStart = new Button();
             lblHowToPlay = new Label();
             pbxShapesColours = new PictureBox();
+            tbxInstructions = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShapesColours).BeginInit();
@@ -89,6 +90,16 @@
             pbxShapesColours.TabIndex = 6;
             pbxShapesColours.TabStop = false;
             // 
+            // tbxInstructions
+            // 
+            tbxInstructions.Font = new Font("Gill Sans Ultra Bold Condensed", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            tbxInstructions.Location = new Point(363, 161);
+            tbxInstructions.Multiline = true;
+            tbxInstructions.Name = "tbxInstructions";
+            tbxInstructions.Size = new Size(977, 120);
+            tbxInstructions.TabIndex = 7;
+            tbxInstructions.Text = "Click on the coloured shape at the top of the screen to score points! But be careful if you click the wrong shape you'lll lose points.";
+            // 
             // frmHowToPlay
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -96,10 +107,11 @@
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
             Controls.Add(pbxShapesColours);
-            Controls.Add(lblHowToPlay);
             Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);
+            Controls.Add(tbxInstructions);
+            Controls.Add(lblHowToPlay);
             Name = "frmHowToPlay";
             Text = "HowToPlay";
             Load += frmHowToPlay_Load;
@@ -117,5 +129,6 @@
         private Button btnBackToStart;
         private Label lblHowToPlay;
         private PictureBox pbxShapesColours;
+        private TextBox tbxInstructions;
     }
 }

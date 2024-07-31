@@ -36,8 +36,8 @@ namespace ShapeSearch_kf
                 //if totalScore doesn't equal -1000 AND username doesn't equal nameEntered
                 if (totalScore != -1000 && username != "nameEntered")
                 {
-                    //write to text file the users totalscore followed by a gap and then their username
-                    sw.WriteLine(username + (" ") + totalScore);
+                    //write to text file the username followed by their totalscore
+                    sw.WriteLine(totalScore + (" ") + username);
                 }
 
             }
@@ -48,17 +48,19 @@ namespace ShapeSearch_kf
             string[] players = new string[lineCount];
 
             int i = 0;
-            string line;
+            string line = "";
 
             using (StreamReader sr = new StreamReader("leaderboard.txt"))
             {
                 while ((line = sr.ReadLine()) != null)
                 {
-                    string[] data = line.Split(' ');
+                    string[] data = line.Split(" ");
                     if (data.Length == 2)
                     {
-                        players[i] = data[0];
-                        scores[i] = Convert.ToInt32(data[1]);
+                        int score = Convert.ToInt32(data[0]);
+                        scores[i] = score;
+                        players[i] = data[1];
+                        
                         i++;
                     }
                 }
