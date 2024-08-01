@@ -53,17 +53,18 @@
             ((System.ComponentModel.ISupportInitialize)pbxShape8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape10).BeginInit();
+            pnlShapeHolder.SuspendLayout();
             SuspendLayout();
             // 
             // lblTime
             // 
-            lblTime.AutoSize = true;
             lblTime.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTime.Location = new Point(735, -9);
+            lblTime.Location = new Point(775, 0);
             lblTime.Name = "lblTime";
             lblTime.Size = new Size(174, 137);
             lblTime.TabIndex = 0;
             lblTime.Text = "30";
+            lblTime.TextAlign = ContentAlignment.TopCenter;
             // 
             // timerTime
             // 
@@ -82,13 +83,12 @@
             // 
             // lblFindShape
             // 
-            lblFindShape.AutoSize = true;
             lblFindShape.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFindShape.Location = new Point(181, 109);
+            lblFindShape.Location = new Point(115, 105);
             lblFindShape.Name = "lblFindShape";
-            lblFindShape.Size = new Size(1241, 137);
+            lblFindShape.Size = new Size(1494, 137);
             lblFindShape.TabIndex = 2;
-            lblFindShape.Text = "CLICK THE (colour) (shape)";
+            lblFindShape.TextAlign = ContentAlignment.TopCenter;
             // 
             // pbxShape2
             // 
@@ -173,6 +173,8 @@
             // 
             // pnlShapeHolder
             // 
+            pnlShapeHolder.Controls.Add(lblFindShape);
+            pnlShapeHolder.Controls.Add(lblTime);
             pnlShapeHolder.Location = new Point(-1, 4);
             pnlShapeHolder.Name = "pnlShapeHolder";
             pnlShapeHolder.Size = new Size(1691, 880);
@@ -193,9 +195,7 @@
             Controls.Add(pbxShape4);
             Controls.Add(pbxShape3);
             Controls.Add(pbxShape2);
-            Controls.Add(lblFindShape);
             Controls.Add(pbxShape1);
-            Controls.Add(lblTime);
             Controls.Add(pnlShapeHolder);
             Name = "frmGame";
             Text = "Game";
@@ -210,8 +210,8 @@
             ((System.ComponentModel.ISupportInitialize)pbxShape8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape10).EndInit();
+            pnlShapeHolder.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

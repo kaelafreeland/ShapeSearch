@@ -29,6 +29,7 @@ namespace ShapeSearch_kf
         {
             lblPoints.Text = "YOU SCORED " + totalScore.ToString() + " POINTS";
             tbxEnterName.Text = " ENTER NAME HERE...";
+            
         }
 
         private void btnToLeaderboard_Click(object sender, EventArgs e)
