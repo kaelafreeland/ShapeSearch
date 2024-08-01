@@ -43,6 +43,7 @@
             pbxShape9 = new PictureBox();
             pbxShape10 = new PictureBox();
             pnlShapeHolder = new Panel();
+            timerCountdown = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pbxShape1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape3).BeginInit();
@@ -180,6 +181,12 @@
             pnlShapeHolder.Size = new Size(1691, 880);
             pnlShapeHolder.TabIndex = 12;
             // 
+            // timerCountdown
+            // 
+            timerCountdown.Enabled = true;
+            timerCountdown.Interval = 1000;
+            timerCountdown.Tick += timerCountdown_Tick;
+            // 
             // frmGame
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -198,6 +205,7 @@
             Controls.Add(pbxShape1);
             Controls.Add(pnlShapeHolder);
             Name = "frmGame";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Game";
             Load += frmGame_Load;
             ((System.ComponentModel.ISupportInitialize)pbxShape1).EndInit();
@@ -230,5 +238,6 @@
         private PictureBox pbxShape9;
         private PictureBox pbxShape10;
         private Panel pnlShapeHolder;
+        private System.Windows.Forms.Timer timerCountdown;
     }
 }

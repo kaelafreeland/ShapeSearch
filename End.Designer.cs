@@ -84,14 +84,13 @@
             // 
             // lblPoints
             // 
-            lblPoints.AutoSize = true;
             lblPoints.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
             lblPoints.ForeColor = Color.FromArgb(109, 88, 157);
-            lblPoints.Location = new Point(263, 162);
+            lblPoints.Location = new Point(287, 188);
             lblPoints.Name = "lblPoints";
-            lblPoints.Size = new Size(1018, 137);
+            lblPoints.Size = new Size(1113, 137);
             lblPoints.TabIndex = 6;
-            lblPoints.Text = "YOU SCORED # POINTS";
+            lblPoints.TextAlign = ContentAlignment.TopCenter;
             lblPoints.Click += lblPoints_Click;
             // 
             // tbxEnterName
@@ -132,6 +131,7 @@
             Controls.Add(btnToLeaderboard);
             Controls.Add(tbxEnding);
             Name = "frmEnd";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "End";
             Load += frmEnd_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();

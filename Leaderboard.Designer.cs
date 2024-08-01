@@ -102,6 +102,7 @@
             Controls.Add(pbxPanel2);
             Controls.Add(lblLeaderBoard);
             Name = "frmLeaderboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Leaderboard";
             Load += frmLeaderboard_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();

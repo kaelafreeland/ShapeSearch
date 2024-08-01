@@ -113,6 +113,7 @@
             Controls.Add(tbxInstructions);
             Controls.Add(lblHowToPlay);
             Name = "frmHowToPlay";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HowToPlay";
             Load += frmHowToPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
