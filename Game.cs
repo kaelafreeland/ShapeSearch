@@ -21,7 +21,7 @@ namespace ShapeSearch_kf
             InitializeComponent();
             InitializePbxShapes();
             RandomizeImages();
-
+            //    timerCountdown.Start();
         }
 
         private void frmGame_Load(object sender, EventArgs e)
@@ -120,37 +120,41 @@ namespace ShapeSearch_kf
             {
                 score = score += addpoints;
                 RandomizeImages();
+                lblScore.Text = score.ToString();
             }
             else
             {
 
                 score = score -= removepoints;
+                lblScore.Text = score.ToString();
             }
         }
 
-        private void timerCountdown_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = "3";
-            //converts seconds into label to countdown
-            int timer = Convert.ToInt32(lblTime.Text);
-            //decreases the timer by 1
-            timer = timer - 1;
-            //change the text shown on countdown label with each new value for timer
-            lblTime.Text = Convert.ToString(timer);
-            //when timer is equal to 0
-            if (timer == 0)
-            {
-                //stops timer countdown
-                timerCountdown.Stop();
-                //starts timer score 
-                timerTime.Start();
-            }
+        //   private void timerCountdown_Tick(object sender, EventArgs e)
+        //   {
 
-        }
+        //converts seconds into label to countdown
+        //     int timer = Convert.ToInt32(lblCountdown.Text);
+        //decreases the timer by 1
+        //   timer = timer - 1;
+        //change the text shown on countdown label with each new value for timer
+        // lblTime.Text = Convert.ToString(timer);
+        //when timer is equal to 0
+        //     if (timer == 0)
+        //   {
+        //stops timer countdown
+        //     timerCountdown.Stop();
+        //   lblCountdown.Visible = false;
+        // lblTime.Visible = true;
+        //starts timer score 
+        //        timerTime.Start();
+        //      }
+
+        //     }
         public void timerTime_Tick(object sender, EventArgs e)
         {
             // Convert current timer value to an int
-            lblTime.Text = "30";
+            //  lblTime.Text = "30";
             int timer = Convert.ToInt32(lblTime.Text);
             // Increment timer value by -1
             timer = timer - 1;
@@ -220,6 +224,15 @@ namespace ShapeSearch_kf
 
         #endregion
 
-     
+
+        private void lblCountdown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFindShape_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

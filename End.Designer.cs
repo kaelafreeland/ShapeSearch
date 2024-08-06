@@ -69,7 +69,7 @@
             btnToLeaderboard.Text = "TO LEADERBOARD";
             btnToLeaderboard.UseVisualStyleBackColor = false;
             btnToLeaderboard.Visible = false;
-            btnToLeaderboard.Click += btnToLeaderboard_Click;
+         //   btnToLeaderboard.Click += btnToLeaderboard_Click;
             // 
             // lblWellDone
             // 

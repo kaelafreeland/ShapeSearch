@@ -32,17 +32,18 @@ namespace ShapeSearch_kf
             
         }
 
-        private void btnToLeaderboard_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
-            frmLeaderboard.Show();
-        }
+     //   private void btnToLeaderboard_Click(object sender, EventArgs e)
+       // {
+         //   this.Hide();
+           // frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
+            //frmLeaderboard.Show();
+        //}
 
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
             textEntered = true;
-            tbxEnterName.Text = "";
+            //   tbxEnterName.Text = "";
+           
         }
         private void tbxEnterName_TextChanged(object sender, EventArgs e)
         {
@@ -57,8 +58,11 @@ namespace ShapeSearch_kf
             //check if pressed key is enter
             if (e.KeyCode == Keys.Enter)
             {
+                this.Hide();
+                frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
+                frmLeaderboard.Show();
                 //makes the button 'to leaderboard' visible
-                btnToLeaderboard.Visible = true;
+               // btnToLeaderboard.Visible = true;
             }
         }
 

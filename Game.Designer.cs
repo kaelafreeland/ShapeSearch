@@ -43,6 +43,8 @@
             pbxShape9 = new PictureBox();
             pbxShape10 = new PictureBox();
             pnlShapeHolder = new Panel();
+            lblCountdown = new Label();
+            lblScore = new Label();
             timerCountdown = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pbxShape1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape2).BeginInit();
@@ -90,6 +92,7 @@
             lblFindShape.Size = new Size(1494, 137);
             lblFindShape.TabIndex = 2;
             lblFindShape.TextAlign = ContentAlignment.TopCenter;
+            lblFindShape.Click += lblFindShape_Click;
             // 
             // pbxShape2
             // 
@@ -174,18 +177,42 @@
             // 
             // pnlShapeHolder
             // 
+            pnlShapeHolder.Controls.Add(lblCountdown);
             pnlShapeHolder.Controls.Add(lblFindShape);
             pnlShapeHolder.Controls.Add(lblTime);
+            pnlShapeHolder.Controls.Add(lblScore);
             pnlShapeHolder.Location = new Point(-1, 4);
             pnlShapeHolder.Name = "pnlShapeHolder";
             pnlShapeHolder.Size = new Size(1691, 880);
             pnlShapeHolder.TabIndex = 12;
             // 
+            // lblCountdown
+            // 
+            lblCountdown.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCountdown.Location = new Point(775, 0);
+            lblCountdown.Name = "lblCountdown";
+            lblCountdown.Size = new Size(174, 137);
+            lblCountdown.TabIndex = 3;
+            lblCountdown.Text = "5";
+            lblCountdown.TextAlign = ContentAlignment.TopCenter;
+            lblCountdown.Visible = false;
+            lblCountdown.Click += lblCountdown_Click;
+            // 
+            // lblScore
+            // 
+            lblScore.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.ImageAlign = ContentAlignment.TopRight;
+            lblScore.Location = new Point(1356, 0);
+            lblScore.Name = "lblScore";
+            lblScore.Size = new Size(332, 149);
+            lblScore.TabIndex = 4;
+            lblScore.Text = "0";
+            lblScore.TextAlign = ContentAlignment.TopRight;
+            // 
             // timerCountdown
             // 
             timerCountdown.Enabled = true;
             timerCountdown.Interval = 1000;
-            timerCountdown.Tick += timerCountdown_Tick;
             // 
             // frmGame
             // 
@@ -200,9 +227,9 @@
             Controls.Add(pbxShape7);
             Controls.Add(pbxShape5);
             Controls.Add(pbxShape4);
-            Controls.Add(pbxShape3);
             Controls.Add(pbxShape2);
             Controls.Add(pbxShape1);
+            Controls.Add(pbxShape3);
             Controls.Add(pnlShapeHolder);
             Name = "frmGame";
             StartPosition = FormStartPosition.CenterScreen;
@@ -239,5 +266,7 @@
         private PictureBox pbxShape10;
         private Panel pnlShapeHolder;
         private System.Windows.Forms.Timer timerCountdown;
+        private Label lblCountdown;
+        private Label lblScore;
     }
 }
