@@ -234,5 +234,10 @@ namespace ShapeSearch_kf
         {
 
         }
+
+        private void lblScore_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

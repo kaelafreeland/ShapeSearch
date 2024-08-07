@@ -46,6 +46,7 @@
             lblCountdown = new Label();
             lblScore = new Label();
             timerCountdown = new System.Windows.Forms.Timer(components);
+            lblScoreLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxShape1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape3).BeginInit();
@@ -181,6 +182,7 @@
             pnlShapeHolder.Controls.Add(lblFindShape);
             pnlShapeHolder.Controls.Add(lblTime);
             pnlShapeHolder.Controls.Add(lblScore);
+            pnlShapeHolder.Controls.Add(lblScoreLabel);
             pnlShapeHolder.Location = new Point(-1, 4);
             pnlShapeHolder.Name = "pnlShapeHolder";
             pnlShapeHolder.Size = new Size(1691, 880);
@@ -200,19 +202,29 @@
             // 
             // lblScore
             // 
-            lblScore.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScore.Font = new Font("Gill Sans Ultra Bold Condensed", 35F, FontStyle.Regular, GraphicsUnit.Point);
             lblScore.ImageAlign = ContentAlignment.TopRight;
-            lblScore.Location = new Point(1356, 0);
+            lblScore.Location = new Point(225, 0);
             lblScore.Name = "lblScore";
-            lblScore.Size = new Size(332, 149);
+            lblScore.Size = new Size(332, 94);
             lblScore.TabIndex = 4;
             lblScore.Text = "0";
-            lblScore.TextAlign = ContentAlignment.TopRight;
+            lblScore.Click += lblScore_Click;
             // 
             // timerCountdown
             // 
             timerCountdown.Enabled = true;
             timerCountdown.Interval = 1000;
+            // 
+            // lblScoreLabel
+            // 
+            lblScoreLabel.AutoSize = true;
+            lblScoreLabel.Font = new Font("Gill Sans Ultra Bold Condensed", 35F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScoreLabel.Location = new Point(0, 0);
+            lblScoreLabel.Name = "lblScoreLabel";
+            lblScoreLabel.Size = new Size(249, 94);
+            lblScoreLabel.TabIndex = 5;
+            lblScoreLabel.Text = "SCORE:";
             // 
             // frmGame
             // 
@@ -246,6 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)pbxShape9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape10).EndInit();
             pnlShapeHolder.ResumeLayout(false);
+            pnlShapeHolder.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -268,5 +281,6 @@
         private System.Windows.Forms.Timer timerCountdown;
         private Label lblCountdown;
         private Label lblScore;
+        private Label lblScoreLabel;
     }
 }
