@@ -60,7 +60,7 @@ namespace ShapeSearch_kf
                         int score = Convert.ToInt32(data[0]);
                         scores[i] = score;
                         players[i] = data[1];
-                        
+
                         i++;
                     }
                 }
@@ -86,11 +86,16 @@ namespace ShapeSearch_kf
         private void lblLeaderBoard_Click(object sender, EventArgs e)
         {
 
-        } 
+        }
+
+        private void rtbLeaderboard_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
-        
 
-      
-    
+
+
+
 }

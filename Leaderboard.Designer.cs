@@ -82,13 +82,16 @@
             // 
             // rtbLeaderboard
             // 
+            rtbLeaderboard.BackColor = Color.White;
             rtbLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
             rtbLeaderboard.Location = new Point(393, 220);
             rtbLeaderboard.Name = "rtbLeaderboard";
+            rtbLeaderboard.ReadOnly = true;
             rtbLeaderboard.ScrollBars = RichTextBoxScrollBars.None;
             rtbLeaderboard.Size = new Size(877, 475);
             rtbLeaderboard.TabIndex = 4;
             rtbLeaderboard.Text = "";
+            rtbLeaderboard.TextChanged += rtbLeaderboard_TextChanged;
             // 
             // frmLeaderboard
             // 
