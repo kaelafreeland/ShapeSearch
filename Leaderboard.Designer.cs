@@ -85,7 +85,7 @@
             // 
             rtbLeaderboard.BackColor = Color.White;
             rtbLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
-            rtbLeaderboard.Location = new Point(393, 220);
+            rtbLeaderboard.Location = new Point(397, 258);
             rtbLeaderboard.Name = "rtbLeaderboard";
             rtbLeaderboard.ReadOnly = true;
             rtbLeaderboard.ScrollBars = RichTextBoxScrollBars.None;
@@ -96,12 +96,12 @@
             // 
             // lblRank
             // 
-            lblRank.AutoSize = true;
-            lblRank.Location = new Point(107, 0);
+            lblRank.Font = new Font("Gill Sans Ultra Bold Condensed", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRank.Location = new Point(397, 176);
             lblRank.Name = "lblRank";
-            lblRank.Size = new Size(129, 25);
+            lblRank.Size = new Size(877, 66);
             lblRank.TabIndex = 5;
-            lblRank.Text = "rank goes here";
+            lblRank.TextAlign = ContentAlignment.TopCenter;
             // 
             // frmLeaderboard
             // 

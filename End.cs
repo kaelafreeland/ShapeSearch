@@ -28,18 +28,15 @@ namespace ShapeSearch_kf
 
         private void frmEnd_Load(object sender, EventArgs e)
         {
+            //write points gained to label
             lblPoints.Text = "YOU SCORED " + totalScore.ToString() + " POINTS";
             tbxEnterName.Text = " ENTER NAME HERE...";
 
         }
 
-       
-
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
             textEntered = true;
-            
-           
         }
         private void tbxEnterName_TextChanged(object sender, EventArgs e)
         {

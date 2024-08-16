@@ -92,12 +92,15 @@ namespace ShapeSearch_kf
                 rtbLeaderboard.Text += scores[i] + " " + players[i] + "\r\n";
             }
 
+
+
             // If the rank is -1, calculate the rank based on the leaderboard data
             if (ranking == -1 && totalScore != -1000 && username != "nameEntered")
             {
                 ranking = CalculateRank(scores, totalScore);
                 lblRank.Text = "YOUR RANK: " + ranking.ToString();
             }
+            //if totalscore is not -1000 and name is not nameEntered
             else if (totalScore == -1000 && username == "nameEntered")
             {
                 lblRank.Text = "NO RANK AVAILABLE";

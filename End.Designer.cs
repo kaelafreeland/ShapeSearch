@@ -31,12 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEnd));
             pbxPanel1 = new PictureBox();
             pbxPanel2 = new PictureBox();
-            btnToLeaderboard = new Button();
             lblWellDone = new Label();
             lblPoints = new Label();
             tbxEnterName = new TextBox();
             tbxEnding = new TextBox();
-            lblRank = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             SuspendLayout();
@@ -59,24 +57,12 @@
             pbxPanel2.TabIndex = 2;
             pbxPanel2.TabStop = false;
             // 
-            // btnToLeaderboard
-            // 
-            btnToLeaderboard.BackColor = Color.FromArgb(255, 209, 71);
-            btnToLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 60F, FontStyle.Regular, GraphicsUnit.Point);
-            btnToLeaderboard.Location = new Point(325, 673);
-            btnToLeaderboard.Name = "btnToLeaderboard";
-            btnToLeaderboard.Size = new Size(1029, 148);
-            btnToLeaderboard.TabIndex = 3;
-            btnToLeaderboard.Text = "TO LEADERBOARD";
-            btnToLeaderboard.UseVisualStyleBackColor = false;
-            btnToLeaderboard.Visible = false;
-            // 
             // lblWellDone
             // 
             lblWellDone.AutoSize = true;
             lblWellDone.Font = new Font("Gill Sans Ultra Bold Condensed", 70F, FontStyle.Regular, GraphicsUnit.Point);
             lblWellDone.ForeColor = Color.SteelBlue;
-            lblWellDone.Location = new Point(407, 9);
+            lblWellDone.Location = new Point(411, 63);
             lblWellDone.Name = "lblWellDone";
             lblWellDone.Size = new Size(841, 190);
             lblWellDone.TabIndex = 5;
@@ -86,7 +72,7 @@
             // 
             lblPoints.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
             lblPoints.ForeColor = Color.FromArgb(109, 88, 157);
-            lblPoints.Location = new Point(287, 188);
+            lblPoints.Location = new Point(287, 253);
             lblPoints.Name = "lblPoints";
             lblPoints.Size = new Size(1113, 137);
             lblPoints.TabIndex = 6;
@@ -97,7 +83,7 @@
             // 
             tbxEnterName.BackColor = Color.FromArgb(255, 209, 71);
             tbxEnterName.Font = new Font("Gill Sans Ultra Bold Condensed", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            tbxEnterName.Location = new Point(325, 551);
+            tbxEnterName.Location = new Point(325, 625);
             tbxEnterName.MaxLength = 16;
             tbxEnterName.Name = "tbxEnterName";
             tbxEnterName.Size = new Size(1029, 107);
@@ -110,21 +96,12 @@
             // tbxEnding
             // 
             tbxEnding.Font = new Font("Gill Sans Ultra Bold Condensed", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            tbxEnding.Location = new Point(325, 368);
+            tbxEnding.Location = new Point(325, 437);
             tbxEnding.Multiline = true;
             tbxEnding.Name = "tbxEnding";
             tbxEnding.Size = new Size(1029, 207);
             tbxEnding.TabIndex = 8;
             tbxEnding.Text = "TO MAKE THE LEADERBOARAD ENTER YOUR NAME BELOW (16 char limit):\r\n";
-            // 
-            // lblRank
-            // 
-            lblRank.AutoSize = true;
-            lblRank.Location = new Point(805, 1);
-            lblRank.Name = "lblRank";
-            lblRank.Size = new Size(131, 25);
-            lblRank.TabIndex = 9;
-            lblRank.Text = "rang goes here";
             // 
             // frmEnd
             // 
@@ -132,13 +109,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
-            Controls.Add(lblRank);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);
             Controls.Add(tbxEnterName);
             Controls.Add(lblPoints);
             Controls.Add(lblWellDone);
-            Controls.Add(btnToLeaderboard);
             Controls.Add(tbxEnding);
             Name = "frmEnd";
             StartPosition = FormStartPosition.CenterScreen;
@@ -154,11 +129,9 @@
 
         private PictureBox pbxPanel1;
         private PictureBox pbxPanel2;
-        private Button btnToLeaderboard;
         private Label lblWellDone;
         private Label lblPoints;
         private TextBox tbxEnterName;
         private TextBox tbxEnding;
-        private Label lblRank;
     }
 }
