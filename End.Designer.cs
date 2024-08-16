@@ -36,6 +36,7 @@
             lblPoints = new Label();
             tbxEnterName = new TextBox();
             tbxEnding = new TextBox();
+            lblRank = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             SuspendLayout();
@@ -69,7 +70,6 @@
             btnToLeaderboard.Text = "TO LEADERBOARD";
             btnToLeaderboard.UseVisualStyleBackColor = false;
             btnToLeaderboard.Visible = false;
-         //   btnToLeaderboard.Click += btnToLeaderboard_Click;
             // 
             // lblWellDone
             // 
@@ -117,12 +117,22 @@
             tbxEnding.TabIndex = 8;
             tbxEnding.Text = "TO MAKE THE LEADERBOARAD ENTER YOUR NAME BELOW (16 char limit):\r\n";
             // 
+            // lblRank
+            // 
+            lblRank.AutoSize = true;
+            lblRank.Location = new Point(805, 1);
+            lblRank.Name = "lblRank";
+            lblRank.Size = new Size(131, 25);
+            lblRank.TabIndex = 9;
+            lblRank.Text = "rang goes here";
+            // 
             // frmEnd
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(lblRank);
             Controls.Add(pbxPanel2);
             Controls.Add(pbxPanel1);
             Controls.Add(tbxEnterName);
@@ -149,5 +159,6 @@
         private Label lblPoints;
         private TextBox tbxEnterName;
         private TextBox tbxEnding;
+        private Label lblRank;
     }
 }

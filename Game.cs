@@ -21,7 +21,7 @@ namespace ShapeSearch_kf
             InitializeComponent();
             InitializePbxShapes();
             RandomizeImages();
-            //    timerCountdown.Start();
+         
         }
 
         private void frmGame_Load(object sender, EventArgs e)
@@ -130,42 +130,23 @@ namespace ShapeSearch_kf
             }
         }
 
-        //   private void timerCountdown_Tick(object sender, EventArgs e)
-        //   {
-
-        //converts seconds into label to countdown
-        //     int timer = Convert.ToInt32(lblCountdown.Text);
-        //decreases the timer by 1
-        //   timer = timer - 1;
-        //change the text shown on countdown label with each new value for timer
-        // lblTime.Text = Convert.ToString(timer);
-        //when timer is equal to 0
-        //     if (timer == 0)
-        //   {
-        //stops timer countdown
-        //     timerCountdown.Stop();
-        //   lblCountdown.Visible = false;
-        // lblTime.Visible = true;
-        //starts timer score 
-        //        timerTime.Start();
-        //      }
-
-        //     }
+        
         public void timerTime_Tick(object sender, EventArgs e)
         {
-            // Convert current timer value to an int
-            //  lblTime.Text = "30";
+            //convert current timer value to an int
+            //lblTime.Text = "30";
             int timer = Convert.ToInt32(lblTime.Text);
-            // Increment timer value by -1
+            //increments timer value by -1
             timer = timer - 1;
-            // Convert timer value to string and write to label
+            //convert timer value to string and write to label
             lblTime.Text = Convert.ToString(timer);
             if (timer == 0)
             {
                 this.Hide();
-                // Creates and opens game screen and makes form variable to address throughout code
-                frmEnd frmEnd = new frmEnd(score);
-                // Opens game form
+                List<int> mockLeaderboard = new List<int>();
+                //creates and opens game screen and makes form variable to address throughout code
+                frmEnd frmEnd = new frmEnd(score, mockLeaderboard);
+                //opens game form
                 frmEnd.Show();
             }
         }

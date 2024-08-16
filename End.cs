@@ -19,30 +19,44 @@ namespace ShapeSearch_kf
         bool textEntered = false;
         string username;
 
-        public frmEnd(int argstotalScore)
+        //mock up list of actual leaderboard
+        List<int> mockLeaderboard; 
+        int rank;
+
+        public frmEnd(int argstotalScore, List<int> argsmockLeaderboard)
         {
             InitializeComponent();
             totalScore = argstotalScore;
+
+            mockLeaderboard = argsmockLeaderboard;
         }
 
         private void frmEnd_Load(object sender, EventArgs e)
         {
             lblPoints.Text = "YOU SCORED " + totalScore.ToString() + " POINTS";
             tbxEnterName.Text = " ENTER NAME HERE...";
-            
+
+            rank = CalculateRank(totalScore);
+            lblRank.Text = "YOUR RANK: " + rank.ToString();
         }
 
-     //   private void btnToLeaderboard_Click(object sender, EventArgs e)
-       // {
-         //   this.Hide();
-           // frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
-            //frmLeaderboard.Show();
-        //}
+        private int CalculateRank(int score)
+        {
+            //adds current score to leaderboard list
+            mockLeaderboard.Add(score);
+
+            //sorts the list of scores and orders it in descending order
+            mockLeaderboard.Sort();
+            mockLeaderboard.Reverse();
+
+            //returns index of score +1
+            return mockLeaderboard.IndexOf(score) + 1;
+        }
 
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
             textEntered = true;
-            //   tbxEnterName.Text = "";
+            //tbxEnterName.Text = "";
            
         }
         private void tbxEnterName_TextChanged(object sender, EventArgs e)
