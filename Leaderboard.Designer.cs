@@ -34,6 +34,7 @@
             lblLeaderBoard = new Label();
             btnBackToStart = new Button();
             rtbLeaderboard = new RichTextBox();
+            lblRank = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             SuspendLayout();
@@ -93,12 +94,22 @@
             rtbLeaderboard.Text = "";
             rtbLeaderboard.TextChanged += rtbLeaderboard_TextChanged;
             // 
+            // lblRank
+            // 
+            lblRank.AutoSize = true;
+            lblRank.Location = new Point(107, 0);
+            lblRank.Name = "lblRank";
+            lblRank.Size = new Size(129, 25);
+            lblRank.TabIndex = 5;
+            lblRank.Text = "rank goes here";
+            // 
             // frmLeaderboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(lblRank);
             Controls.Add(rtbLeaderboard);
             Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel1);
@@ -121,5 +132,6 @@
         private Label lblLeaderBoard;
         private Button btnBackToStart;
         private RichTextBox rtbLeaderboard;
+        private Label lblRank;
     }
 }

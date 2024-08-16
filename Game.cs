@@ -148,7 +148,7 @@ namespace ShapeSearch_kf
 
                 
                 //creates and opens game screen and makes form variable to address throughout code
-                frmEnd frmEnd = new frmEnd(score, mockLeaderboard);
+                frmEnd frmEnd = new frmEnd(score);
                 //opens game form
                 frmEnd.Show();
             }

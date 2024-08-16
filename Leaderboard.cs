@@ -14,12 +14,22 @@ namespace ShapeSearch_kf
     {
         private int totalScore;
         private string username;
+        private int ranking;
 
         public frmLeaderboard(int argsTotalScore, string argsUsername)
         {
             InitializeComponent();
             totalScore = argsTotalScore;
             username = argsUsername;
+            ranking = -1;
+        }
+
+        public frmLeaderboard(int argsTotalScore, string argsUsername, int argsRanking)
+        {
+            InitializeComponent();
+            totalScore = argsTotalScore;
+            username = argsUsername;
+            ranking = argsRanking;
         }
 
         private void btnBackToStart_Click(object sender, EventArgs e)
@@ -74,16 +84,41 @@ namespace ShapeSearch_kf
             //puts the players in descending order
             Array.Reverse(players);
 
+            rtbLeaderboard.Clear();
             //loops through array of scores and users
             for (i = 0; i < scores.Length; i++)
             {
                 //writes the score and user on a line in textbox, a new line for each new user and score (descending)
                 rtbLeaderboard.Text += scores[i] + " " + players[i] + "\r\n";
-
             }
 
+            // If the rank is -1, calculate the rank based on the leaderboard data
+            if (ranking == -1 && totalScore != -1000 && username != "nameEntered")
+            {
+                ranking = CalculateRank(scores, totalScore);
+                lblRank.Text = "YOUR RANK: " + ranking.ToString();
+            }
+            else if (totalScore == -1000 && username == "nameEntered")
+            {
+                lblRank.Text = "NO RANK AVAILABLE";
+            }
+
+            int CalculateRank(int[] sortedScores, int playerScore)
+            {
+                // Find the rank based on the player's score position
+                for (int i = 0; i < sortedScores.Length; i++)
+                {
+                    if (sortedScores[i] == playerScore)
+                    {
+                        //return index +1
+                        return i + 1;
+                    }
+                }
+
+                return -1; 
+            }
         }
-        private void lblLeaderBoard_Click(object sender, EventArgs e)
+            private void lblLeaderBoard_Click(object sender, EventArgs e)
         {
 
         }
