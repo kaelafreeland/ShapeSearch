@@ -28,7 +28,7 @@ namespace ShapeSearch_kf
             InitializeComponent();
             totalScore = argstotalScore;
 
-            mockLeaderboard = argsmockLeaderboard;
+            mockLeaderboard = new List<int>(argsmockLeaderboard);
         }
 
         private void frmEnd_Load(object sender, EventArgs e)
@@ -45,7 +45,6 @@ namespace ShapeSearch_kf
             //adds current score to leaderboard list
             mockLeaderboard.Add(score);
 
-            //sorts the list of scores and orders it in descending order
             mockLeaderboard.Sort();
             mockLeaderboard.Reverse();
 
@@ -56,7 +55,7 @@ namespace ShapeSearch_kf
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
             textEntered = true;
-            //tbxEnterName.Text = "";
+            
            
         }
         private void tbxEnterName_TextChanged(object sender, EventArgs e)
@@ -75,8 +74,7 @@ namespace ShapeSearch_kf
                 this.Hide();
                 frmLeaderboard frmLeaderboard = new frmLeaderboard(totalScore, username);
                 frmLeaderboard.Show();
-                //makes the button 'to leaderboard' visible
-               // btnToLeaderboard.Visible = true;
+
             }
         }
 

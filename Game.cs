@@ -143,7 +143,10 @@ namespace ShapeSearch_kf
             if (timer == 0)
             {
                 this.Hide();
-                List<int> mockLeaderboard = new List<int>();
+
+                List<int> mockLeaderboard =  leaderboardData(); 
+
+                
                 //creates and opens game screen and makes form variable to address throughout code
                 frmEnd frmEnd = new frmEnd(score, mockLeaderboard);
                 //opens game form
@@ -151,6 +154,11 @@ namespace ShapeSearch_kf
             }
         }
 
+        private List<int> leaderboardData()
+        {
+            //returns new list
+            return new List<int>();
+        }
         #region pbxShapes
 
         private void pbxShape1_Click(object sender, EventArgs e)
