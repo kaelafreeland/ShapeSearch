@@ -43,7 +43,6 @@
             pbxShape9 = new PictureBox();
             pbxShape10 = new PictureBox();
             pnlShapeHolder = new Panel();
-            lblCountdown = new Label();
             lblScore = new Label();
             lblScoreLabel = new Label();
             timerCountdown = new System.Windows.Forms.Timer(components);
@@ -67,12 +66,10 @@
             lblTime.Name = "lblTime";
             lblTime.Size = new Size(174, 137);
             lblTime.TabIndex = 0;
-            lblTime.Text = "30";
             lblTime.TextAlign = ContentAlignment.TopCenter;
             // 
             // timerTime
             // 
-            timerTime.Enabled = true;
             timerTime.Interval = 1000;
             timerTime.Tick += timerTime_Tick;
             // 
@@ -178,7 +175,6 @@
             // 
             // pnlShapeHolder
             // 
-            pnlShapeHolder.Controls.Add(lblCountdown);
             pnlShapeHolder.Controls.Add(lblFindShape);
             pnlShapeHolder.Controls.Add(lblTime);
             pnlShapeHolder.Controls.Add(lblScore);
@@ -187,18 +183,6 @@
             pnlShapeHolder.Name = "pnlShapeHolder";
             pnlShapeHolder.Size = new Size(1691, 880);
             pnlShapeHolder.TabIndex = 12;
-            // 
-            // lblCountdown
-            // 
-            lblCountdown.Font = new Font("Gill Sans Ultra Bold Condensed", 50F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCountdown.Location = new Point(775, 0);
-            lblCountdown.Name = "lblCountdown";
-            lblCountdown.Size = new Size(174, 137);
-            lblCountdown.TabIndex = 3;
-            lblCountdown.Text = "5";
-            lblCountdown.TextAlign = ContentAlignment.TopCenter;
-            lblCountdown.Visible = false;
-            lblCountdown.Click += lblCountdown_Click;
             // 
             // lblScore
             // 
@@ -283,7 +267,6 @@
         private PictureBox pbxShape10;
         private Panel pnlShapeHolder;
         private System.Windows.Forms.Timer timerCountdown;
-        private Label lblCountdown;
         private Label lblScore;
         private Label lblScoreLabel;
     }

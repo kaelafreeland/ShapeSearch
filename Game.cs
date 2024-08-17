@@ -30,6 +30,7 @@ namespace ShapeSearch_kf
         private void frmGame_Load(object sender, EventArgs e)
         {
             DisableShapes();
+            timerCountdown.Start();
         }
 
         private void InitializePbxShapes()
@@ -163,13 +164,17 @@ namespace ShapeSearch_kf
             if (gameCountdown < 0)
             {
                 //stop countdown 
-                timerCountdown.Stop(); 
+                timerCountdown.Stop();
+                
                 //allow for shapes to be clicked
                 EnableShapes();  
-                gameCountdown = 0;
-                lblTime.Text = gameCountdown.ToString();
+               
+               //  gameCountdown = 0;
+                lblTime.Text = gameTimer.ToString();
                 //start the game timer
+                timerTime.Enabled = true;
                 timerTime.Start();
+                
             }
 
         }
@@ -177,17 +182,17 @@ namespace ShapeSearch_kf
         public void timerTime_Tick(object sender, EventArgs e)
         {
             gameTimer--;
-            lblTime.Text = gameCountdown.ToString();
+            lblTime.Text = gameTimer.ToString();
 
             //if the timer = 0
-            if (gameCountdown == 0)
+            if (gameTimer <= 0)
             {
                 //end the game and close current form
                 timerTime.Stop();
                 this.Hide();
 
 
-                List<int> mockLeaderboard = leaderboardData();
+               List<int> mockLeaderboard = leaderboardData();
 
                 //creat end form and open it
                 frmEnd frmEnd = new frmEnd(score);
