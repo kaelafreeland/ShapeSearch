@@ -16,17 +16,20 @@ namespace ShapeSearch_kf
         int addpoints = 10;
         int removepoints = 3;
 
+        int gameCountdown = 5;
+        int gameTimer = 30;
+
         public frmGame()
         {
             InitializeComponent();
             InitializePbxShapes();
             RandomizeImages();
-         
+
         }
 
         private void frmGame_Load(object sender, EventArgs e)
         {
-
+            DisableShapes();
         }
 
         private void InitializePbxShapes()
@@ -44,6 +47,25 @@ namespace ShapeSearch_kf
             pictureBoxes[8] = pbxShape9;
             pictureBoxes[9] = pbxShape10;
         }
+
+        private void DisableShapes()
+        {
+            //disables all picture boxes so they cannot be clicked
+            foreach (PictureBox pbx in pictureBoxes)
+            {
+                pbx.Enabled = false;
+            }
+        }
+
+        private void EnableShapes()
+        {
+            //enables all picture boxes so they can be clicked
+            foreach (PictureBox pbx in pictureBoxes)
+            {
+                pbx.Enabled = true;
+            }
+        }
+
 
         private void RandomizeImages()
         {
@@ -130,26 +152,45 @@ namespace ShapeSearch_kf
             }
         }
 
-        
+
+        private void timerCountdown_Tick(object sender, EventArgs e)
+        {
+
+            lblTime.Text = gameCountdown.ToString();
+            gameCountdown--;
+
+            //when countdown reaches 0
+            if (gameCountdown < 0)
+            {
+                //stop countdown 
+                timerCountdown.Stop(); 
+                //allow for shapes to be clicked
+                EnableShapes();  
+                gameCountdown = 0;
+                lblTime.Text = gameCountdown.ToString();
+                //start the game timer
+                timerTime.Start();
+            }
+
+        }
+
         public void timerTime_Tick(object sender, EventArgs e)
         {
-            //convert current timer value to an int
-            //lblTime.Text = "30";
-            int timer = Convert.ToInt32(lblTime.Text);
-            //increments timer value by -1
-            timer = timer - 1;
-            //convert timer value to string and write to label
-            lblTime.Text = Convert.ToString(timer);
-            if (timer == 0)
+            gameTimer--;
+            lblTime.Text = gameCountdown.ToString();
+
+            //if the timer = 0
+            if (gameCountdown == 0)
             {
+                //end the game and close current form
+                timerTime.Stop();
                 this.Hide();
 
-                List<int> mockLeaderboard =  leaderboardData(); 
 
-                
-                //creates and opens game screen and makes form variable to address throughout code
+                List<int> mockLeaderboard = leaderboardData();
+
+                //creat end form and open it
                 frmEnd frmEnd = new frmEnd(score);
-                //opens game form
                 frmEnd.Show();
             }
         }
@@ -228,5 +269,7 @@ namespace ShapeSearch_kf
         {
 
         }
+
+       
     }
 }

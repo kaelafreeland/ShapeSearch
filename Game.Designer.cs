@@ -225,6 +225,7 @@
             // 
             timerCountdown.Enabled = true;
             timerCountdown.Interval = 1000;
+            timerCountdown.Tick += timerCountdown_Tick;
             // 
             // frmGame
             // 
