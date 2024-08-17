@@ -19,6 +19,7 @@ namespace ShapeSearch_kf
         bool textEntered = false;
         string username;
 
+       
 
         public frmEnd(int argstotalScore)
         {
@@ -32,11 +33,16 @@ namespace ShapeSearch_kf
             lblPoints.Text = "YOU SCORED " + totalScore.ToString() + " POINTS";
             tbxEnterName.Text = " ENTER NAME HERE...";
 
+
         }
 
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
-            textEntered = true;
+            if (tbxEnterName.Text == "ENTER NAME HERE...")
+            {
+                tbxEnterName.Text = "";
+            }
+
         }
         private void tbxEnterName_TextChanged(object sender, EventArgs e)
         {

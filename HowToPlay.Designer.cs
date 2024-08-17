@@ -117,7 +117,7 @@
             MinimizeBox = false;
             Name = "frmHowToPlay";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HowToPlay";
+            Text = " ";
             Load += frmHowToPlay_Load;
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).EndInit();
