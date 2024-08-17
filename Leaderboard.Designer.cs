@@ -115,6 +115,9 @@
             Controls.Add(pbxPanel1);
             Controls.Add(pbxPanel2);
             Controls.Add(lblLeaderBoard);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmLeaderboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Leaderboard";

@@ -115,6 +115,9 @@
             Controls.Add(lblPoints);
             Controls.Add(lblWellDone);
             Controls.Add(tbxEnding);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmEnd";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "End";

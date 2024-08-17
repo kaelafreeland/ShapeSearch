@@ -119,7 +119,10 @@
             Controls.Add(btnStart);
             Controls.Add(lblShapeSearch);
             Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmStartScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StartScreen";

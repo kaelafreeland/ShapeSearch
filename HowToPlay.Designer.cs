@@ -112,6 +112,9 @@
             Controls.Add(pbxPanel1);
             Controls.Add(tbxInstructions);
             Controls.Add(lblHowToPlay);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmHowToPlay";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HowToPlay";

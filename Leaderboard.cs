@@ -49,17 +49,17 @@ namespace ShapeSearch_kf
                     //write to text file the username followed by their totalscore
                     sw.WriteLine(totalScore + (" ") + username);
                 }
-
             }
-
 
             int lineCount = File.ReadAllLines("leaderboard.txt").Count();
             int[] scores = new int[lineCount];
             string[] players = new string[lineCount];
 
+            //set index = 0
             int i = 0;
             string line = "";
 
+            //reading textfile
             using (StreamReader sr = new StreamReader("leaderboard.txt"))
             {
                 while ((line = sr.ReadLine()) != null)

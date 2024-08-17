@@ -45,8 +45,8 @@
             pnlShapeHolder = new Panel();
             lblCountdown = new Label();
             lblScore = new Label();
-            timerCountdown = new System.Windows.Forms.Timer(components);
             lblScoreLabel = new Label();
+            timerCountdown = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pbxShape1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxShape3).BeginInit();
@@ -211,11 +211,6 @@
             lblScore.Text = "0";
             lblScore.Click += lblScore_Click;
             // 
-            // timerCountdown
-            // 
-            timerCountdown.Enabled = true;
-            timerCountdown.Interval = 1000;
-            // 
             // lblScoreLabel
             // 
             lblScoreLabel.AutoSize = true;
@@ -225,6 +220,11 @@
             lblScoreLabel.Size = new Size(249, 94);
             lblScoreLabel.TabIndex = 5;
             lblScoreLabel.Text = "SCORE:";
+            // 
+            // timerCountdown
+            // 
+            timerCountdown.Enabled = true;
+            timerCountdown.Interval = 1000;
             // 
             // frmGame
             // 
@@ -243,6 +243,9 @@
             Controls.Add(pbxShape1);
             Controls.Add(pbxShape3);
             Controls.Add(pnlShapeHolder);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmGame";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Game";
