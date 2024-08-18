@@ -119,7 +119,7 @@ namespace ShapeSearch_kf
                 // Find the rank based on the player's score position
                 for (int i = 0; i < sortedScores.Length; i++)
                 {
-                    if (sortedScores[i] == playerScore)
+                    if (sortedScores[i] <= playerScore)
                     {
                         //return index +1
                         return i + 1;
