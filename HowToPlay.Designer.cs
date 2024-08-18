@@ -98,7 +98,7 @@
             tbxInstructions.Name = "tbxInstructions";
             tbxInstructions.Size = new Size(977, 120);
             tbxInstructions.TabIndex = 7;
-            tbxInstructions.Text = "Click on the coloured shape at the top of the screen to score points! But be careful if you click the wrong shape you'lll lose points.";
+            tbxInstructions.Text = "Click on the coloured shape at the top of the screen to score points! But be careful if you click the wrong shape you'll lose points.";
             // 
             // frmHowToPlay
             // 

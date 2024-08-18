@@ -92,6 +92,7 @@
             tbxEnterName.TextChanged += tbxEnterName_TextChanged;
             tbxEnterName.Enter += tbxEnterName_Enter;
             tbxEnterName.KeyDown += tbxName_KeyDown;
+            tbxEnterName.Leave += tbxEnterName_Leave;
             // 
             // tbxEnding
             // 

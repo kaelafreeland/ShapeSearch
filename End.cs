@@ -38,13 +38,24 @@ namespace ShapeSearch_kf
 
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
-            if (tbxEnterName.Text == "ENTER NAME HERE...")
+            if (tbxEnterName.Text == " ENTER NAME HERE...")
             {
                 tbxEnterName.Text = "";
             }
 
         }
-        private void tbxEnterName_TextChanged(object sender, EventArgs e)
+
+        private void tbxEnterName_Leave(object sender, EventArgs e)
+        {
+            
+            if (string.IsNullOrWhiteSpace(tbxEnterName.Text))
+            {
+                tbxEnterName.Text = " ENTER NAME HERE...";
+               
+            }
+
+        }
+            private void tbxEnterName_TextChanged(object sender, EventArgs e)
         {
             //if text is entered
             textEntered = true;
