@@ -89,6 +89,7 @@
             tbxEnterName.Size = new Size(1029, 107);
             tbxEnterName.TabIndex = 7;
             tbxEnterName.Text = " ENTER NAME HERE...";
+            tbxEnterName.Click += tbxEnterName_Click;
             tbxEnterName.TextChanged += tbxEnterName_TextChanged;
             tbxEnterName.Enter += tbxEnterName_Enter;
             tbxEnterName.KeyDown += tbxName_KeyDown;

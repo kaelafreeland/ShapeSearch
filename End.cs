@@ -36,12 +36,17 @@ namespace ShapeSearch_kf
 
         }
 
+        private void tbxEnterName_Click(object sender, EventArgs e)
+        {
+            tbxEnterName.Text = "";
+        }
+
         private void tbxEnterName_Enter(object sender, EventArgs e)
         {
-            if (tbxEnterName.Text == " ENTER NAME HERE...")
-            {
-                tbxEnterName.Text = "";
-            }
+        //    if (tbxEnterName.Text == " ENTER NAME HERE...")
+          //  {
+            //    tbxEnterName.Text = "";
+            //}
 
         }
 
@@ -75,6 +80,7 @@ namespace ShapeSearch_kf
             }
         }
 
+       
         private void lblPoints_Click(object sender, EventArgs e)
         {
 

@@ -53,7 +53,7 @@ namespace ShapeSearch_kf
                 if (totalScore != -1000 && username != "nameEntered")
                 {
                     //write to text file the username followed by their totalscore
-                    sw.WriteLine(totalScore + (" ") + username);
+                    sw.WriteLine(totalScore + (",  ,") + username);
                 }
             }
 
@@ -70,7 +70,7 @@ namespace ShapeSearch_kf
             {
                 while ((line = sr.ReadLine()) != null)
                 {
-                    string[] data = line.Split(" ");
+                    string[] data = line.Split(",  ,");
                     if (data.Length == 2)
                     {
                         int score = Convert.ToInt32(data[0]);
