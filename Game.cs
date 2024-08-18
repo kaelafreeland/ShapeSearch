@@ -167,9 +167,12 @@ namespace ShapeSearch_kf
                 timerCountdown.Stop();
                 
                 //allow for shapes to be clicked
-                EnableShapes();  
-               
-               //  gameCountdown = 0;
+                EnableShapes();
+
+                //switches cursor to hand icon
+                this.Cursor = Cursors.Hand;
+
+                //  gameCountdown = 0;
                 lblTime.Text = gameTimer.ToString();
                 //start the game timer
                 timerTime.Enabled = true;
@@ -191,8 +194,7 @@ namespace ShapeSearch_kf
                 timerTime.Stop();
                 this.Hide();
 
-
-               List<int> mockLeaderboard = leaderboardData();
+                List<int> mockLeaderboard = leaderboardData();
 
                 //creat end form and open it
                 frmEnd frmEnd = new frmEnd(score);
@@ -258,12 +260,6 @@ namespace ShapeSearch_kf
         }
 
         #endregion
-
-
-        private void lblCountdown_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblFindShape_Click(object sender, EventArgs e)
         {
