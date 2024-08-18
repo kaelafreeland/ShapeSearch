@@ -22,6 +22,8 @@ namespace ShapeSearch_kf
             totalScore = argsTotalScore;
             username = argsUsername;
             ranking = -1;
+
+           
         }
 
         public frmLeaderboard(int argsTotalScore, string argsUsername, int argsRanking)
@@ -30,7 +32,11 @@ namespace ShapeSearch_kf
             totalScore = argsTotalScore;
             username = argsUsername;
             ranking = argsRanking;
+
+          
         }
+
+       
 
         private void btnBackToStart_Click(object sender, EventArgs e)
         {
@@ -84,14 +90,16 @@ namespace ShapeSearch_kf
             //puts the players in descending order
             Array.Reverse(players);
 
-            rtbLeaderboard.Clear();
+            
+           
+
+            lblScoreboard.Text = "";
             //loops through array of scores and users
             for (i = 0; i < scores.Length; i++)
             {
                 //writes the score and user on a line in textbox, a new line for each new user and score (descending)
-                rtbLeaderboard.Text += scores[i] + " " + players[i] + "\r\n";
+                lblScoreboard.Text += scores[i] + " " + players[i] + "\r\n";
             }
-
 
 
             // If the rank is -1, calculate the rank based on the leaderboard data
@@ -126,10 +134,7 @@ namespace ShapeSearch_kf
 
         }
 
-        private void rtbLeaderboard_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 
 

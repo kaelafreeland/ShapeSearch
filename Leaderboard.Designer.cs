@@ -33,8 +33,9 @@
             pbxPanel1 = new PictureBox();
             lblLeaderBoard = new Label();
             btnBackToStart = new Button();
-            rtbLeaderboard = new RichTextBox();
             lblRank = new Label();
+            lblScoreboard = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxPanel2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxPanel1).BeginInit();
             SuspendLayout();
@@ -81,19 +82,6 @@
             btnBackToStart.UseVisualStyleBackColor = false;
             btnBackToStart.Click += btnBackToStart_Click;
             // 
-            // rtbLeaderboard
-            // 
-            rtbLeaderboard.BackColor = Color.White;
-            rtbLeaderboard.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
-            rtbLeaderboard.Location = new Point(397, 258);
-            rtbLeaderboard.Name = "rtbLeaderboard";
-            rtbLeaderboard.ReadOnly = true;
-            rtbLeaderboard.ScrollBars = RichTextBoxScrollBars.None;
-            rtbLeaderboard.Size = new Size(877, 475);
-            rtbLeaderboard.TabIndex = 4;
-            rtbLeaderboard.Text = "";
-            rtbLeaderboard.TextChanged += rtbLeaderboard_TextChanged;
-            // 
             // lblRank
             // 
             lblRank.Font = new Font("Gill Sans Ultra Bold Condensed", 30F, FontStyle.Regular, GraphicsUnit.Point);
@@ -103,14 +91,33 @@
             lblRank.TabIndex = 5;
             lblRank.TextAlign = ContentAlignment.TopCenter;
             // 
+            // lblScoreboard
+            // 
+            lblScoreboard.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
+            lblScoreboard.Location = new Point(441, 251);
+            lblScoreboard.Name = "lblScoreboard";
+            lblScoreboard.Size = new Size(977, 475);
+            lblScoreboard.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Gill Sans Ultra Bold Condensed", 34F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(285, 251);
+            label1.Name = "label1";
+            label1.Size = new Size(173, 465);
+            label1.TabIndex = 7;
+            label1.Text = "1st-\r\n2nd-\r\n3rd-\r\n4th-\r\n5th-";
+            // 
             // frmLeaderboard
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1688, 884);
+            Controls.Add(lblScoreboard);
+            Controls.Add(label1);
             Controls.Add(lblRank);
-            Controls.Add(rtbLeaderboard);
             Controls.Add(btnBackToStart);
             Controls.Add(pbxPanel1);
             Controls.Add(pbxPanel2);
@@ -134,7 +141,8 @@
         private PictureBox pbxPanel1;
         private Label lblLeaderBoard;
         private Button btnBackToStart;
-        private RichTextBox rtbLeaderboard;
         private Label lblRank;
+        private Label lblScoreboard;
+        private Label label1;
     }
 }
